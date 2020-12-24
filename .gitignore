@@ -1,0 +1,9 @@
+.vscode/
+
+# audio files
+*.wav
+*.ape
+*.flac
+*.mp3
+*.wv
+*.wvc
