@@ -4,6 +4,8 @@
 - MP3 (lame 3.100.1): Downloaded from https://www.rarewares.org/mp3-lame-bundle.php
 - APE (mac 5.69): Downloaded from https://www.monkeysaudio.com/download.html
 - Wavpack (wavpack 5.3.0): Downloaded from http://www.wavpack.com/downloads.html
+- TAK (takc 2.3.0): Downloaded from http://thbeck.de/Tak/Tak.html
+- TTA (tta 2.3): Downloaded from https://sourceforge.net/projects/tta/files/tta/ttaenc-win/
 
 ## Results
 
