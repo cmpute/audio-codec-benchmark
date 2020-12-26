@@ -20,11 +20,16 @@
 For missing encoder or decoder, [`ffmpeg (4.3.1-2020-11-19 x64)`](https://www.gyan.dev/ffmpeg/builds/) is used. Also note that OptimFrog encoding and decoding always crashes for me, and the dual stream encoding cannot preserve lossless audio (due to the crash , I guess).
 
 # Run your own benchmark
-The script can run regardless of your OS, but the preset codecs and included binaries are for Windows. You will need Python 3 and following libraries installed to run the benchmark.
+The script can run regardless of your OS, but the preset codecs parameters and included binaries are for Windows. You will need Python 3 and following libraries installed to run the benchmark.
 - `numpy`
 - `scipy`
 - `librosa`
 - `matplotlib`
+
+In order to run the benchmark, you have to
+1. Change the audio sources in the `test.py`
+2. Collect missing dlls for `qaac` as mentioned above
+3. Then execute `python test.py`
 
 There are several things you can customize in test.py
 - Change codecs parameters by change `lossless_codecs` and `lossy_codecs` dictionaries.
@@ -32,7 +37,18 @@ There are several things you can customize in test.py
 - Add your test audio files in `files` list.
 
 # Results
-> For detailed numbers, refer to [result.json](./result.json) or [result.md](./result.md)
+
+## Criteria
+- *Compression Ratio (CR)*: compressed file size / original uncompressed file size (lower the better)
+- *Average Bitrate*: compression ratio times original bitrate
+- *Spectrogram Error*: direct difference between power spectrograms (lower the better)
+- *Weighted Spectrogram Error*: direct difference between A-weighted power spectrograms (lower the better)
+- *Signal-to-Noise Ratio (SNR)*: noise is calculated from signal power difference (higher the better)
+- *Weighted SNR*: noise is calculated from A-weighted signal power difference (higher the better)
+
+When calculating the compressed file size for hybrid lossless audio codec (like `wavpack -c -b192`), the size of both compressed audio and correction file are counted in lossless charts, while only the size of compressed audio is counted in lossy charts.
+
+> Note that not all results are shown in the plots since they will make the figure looks messy. Only best results in a series of codecs are plotted. For example in *encoding time - average bitrate* figure, only left-bottom data points are shown for an audio codec. For codec parameters in the figure, there's a *Full Charts* section below figures for each audio file. For complete results with numbers, please refer to [result.json](./result.json) or [result.md](./result.md)
 
 ## PLight - Bass_tek 2 (*Hardcore*)
 
