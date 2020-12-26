@@ -10,7 +10,7 @@ from scipy.spatial import ConvexHull
 cqt_fmin = librosa.note_to_hz('A1')
 ffmpeg_path = './codecs/ffmpeg.exe'
 
-class Codec:
+class Codec: # TODO: add flag indicating whether supporting hires files
     def __init__(self, path, cmd_args):
         '''
         path: path to the codec binary
@@ -76,7 +76,7 @@ class wavpack(Codec):
 
     def decode(self, fin):
         fout = fin + ".wav"
-        wvunpack = self.path.replace("wavpack.exe", "wvunpack.exe")
+        wvunpack = self.path.replace("wavpack", "wvunpack")
         check_call([wvunpack, '-y', fin, fout], stdout=DEVNULL, stderr=DEVNULL)
         if osp.exists(fin.replace(".wv", ".wvc")):
             os.remove(fin.replace(".wv", ".wvc"))
@@ -147,10 +147,11 @@ class lossywav(Codec): # Pipeline mode is not working, so intermediate files are
         lossy_out = fin.replace(".wav", ".lossy.wav")
         lwcdf_out = fin.replace(".wav", ".lwcdf.wav")
         check_call([self.path, fin, '-f', '-S'] + self.cmd_args)
-        lossy_out = self.base_codec.encode(lossy_out)
+        lossy_encoded = self.base_codec.encode(lossy_out)
         if osp.exists(lwcdf_out):
-            lwcdf_out = self.base_codec.encode(lwcdf_out)
-        return lossy_out
+            self.base_codec.encode(lwcdf_out)
+            os.remove(lwcdf_out)
+        return lossy_encoded
 
     def decode(self, fin):
         correction_fin = fin.replace('.lossy', '.lwcdf')
@@ -179,7 +180,7 @@ class lossyflac(lossywav):
         super().__init__(lossywav_path, self.flac_codec, lossywav_args)
 
     def __str__(self):
-        return f"lossyflac ({' '.join(self.cmd_args)}|{' '.join(self.flac_codec.cmd_args)})"
+        return f"lossyflac ({' '.join(self.cmd_args)}|{' '.join(self.flac_codec.cmd_args[:-2])})"
 
 class lossytak(lossywav):
     def __init__(self, lossywav_path, tak_path, lossywav_args, tak_args):
@@ -188,7 +189,7 @@ class lossytak(lossywav):
         super().__init__(lossywav_path, self.tak_codec, lossywav_args)
 
     def __str__(self):
-        return f"lossytak ({' '.join(self.cmd_args)}|{' '.join(self.tak_codec.cmd_args)})"
+        return f"lossytak ({' '.join(self.cmd_args)}|{' '.join(self.tak_codec.cmd_args[:-1])})"
 
 class lossywv(lossywav):
     def __init__(self, lossywav_path, wavpack_path, lossywav_args, wavpack_args):
@@ -197,7 +198,7 @@ class lossywv(lossywav):
         super().__init__(lossywav_path, self.wavpack_codec, lossywav_args)
 
     def __str__(self):
-        return f"lossywv ({' '.join(self.cmd_args)}|{' '.join(self.wavpack_codec.cmd_args)})"
+        return f"lossywv ({' '.join(self.cmd_args)}|{' '.join(self.wavpack_codec.cmd_args[:-2])})"
 
 class lossywmalsl(lossywav):
     def __init__(self, lossywav_path, wma_path, lossywav_args):
@@ -229,7 +230,7 @@ class refalac(Codec):
         check_call([self.path, fin, "-o", fout, "-s", "-D"])
         return fout
 
-class ofr(Codec):
+class ofr(Codec): # OptimFrog
     def __init__(self, path, cmd_args):
         super().__init__(path, cmd_args)
 
@@ -243,7 +244,7 @@ class ofr(Codec):
         call([self.path, "--decode", "--silent", "--overwrite", fin, "--output", fout])
         return fout
 
-class ofs(Codec):
+class ofs(Codec): # OptimFrog Dual Stream
     def __init__(self, path, cmd_args):
         super().__init__(path, cmd_args)
 
@@ -259,6 +260,79 @@ class ofs(Codec):
             os.remove(fin.replace(".ofs", ".ofc"))
         else:
             call([self.path, "--decode", "--silent", "--overwrite", fin, "--output", fout])
+        return fout
+
+class opus(Codec):
+    def __init__(self, path, cmd_args):
+        super().__init__(path, cmd_args)
+
+    def encode(self, fin):
+        fout = fin + ".opus"
+        call([self.path, "--quiet"] + self.cmd_args + [fin, fout])
+        return fout
+
+    def decode(self, fin):
+        fout = fin + ".wav"
+        decoder = self.path.replace("opusenc", "opusdec")
+        call([decoder, "--quiet", fin, fout])
+        return fout
+
+class oggenc(Codec):
+    def __init__(self, path, cmd_args):
+        super().__init__(path, cmd_args)
+
+    def encode(self, fin):
+        fout = fin + ".ogg"
+        check_call([self.path, fin, "-o", fout, "-Q"] + self.cmd_args)
+        return fout
+
+    def decode(self, fin):
+        fout = fin + ".wav"
+        check_call([ffmpeg_path, "-y", "-i", fin, fout], stdout=DEVNULL, stderr=DEVNULL)
+        return fout
+
+class neroaac(Codec):
+    def __init__(self, path, cmd_args):
+        super().__init__(path, cmd_args)
+
+    def encode(self, fin):
+        fout = fin + ".m4a"
+        check_call([self.path, "-if", fin, "-of", fout] + self.cmd_args, stdout=DEVNULL, stderr=DEVNULL)
+        return fout
+
+    def decode(self, fin):
+        fout = fin + ".wav"
+        decoder = self.path.replace("neroAacEnc", "neroAacDec")
+        check_call([decoder, "-if", fin, "-of", fout], stdout=DEVNULL, stderr=DEVNULL)
+        return fout
+
+class qaac(Codec):
+    def __init__(self, path, cmd_args):
+        super().__init__(path, cmd_args)
+
+    def encode(self, fin):
+        fout = fin + ".m4a"
+        check_call([self.path, "-o", fout, "-s"] + self.cmd_args + [fin])
+        return fout
+
+    def decode(self, fin):
+        fout = fin + ".wav"
+        check_call([self.path, "-o", fout, "-s", "-D", fin], stdout=DEVNULL, stderr=DEVNULL)
+        return fout
+
+class mpc(Codec):
+    def __init__(self, path, cmd_args):
+        super().__init__(path, cmd_args)
+
+    def encode(self, fin):
+        fout = fin + ".mpc"
+        call([self.path, "--silent", "--overwrite"] + self.cmd_args + [fin, fout])
+        return fout
+
+    def decode(self, fin):
+        fout = fin + ".wav"
+        decoder = self.path.replace("mpcenc", "mpcdec")
+        call([decoder, fin, fout], stdout=DEVNULL, stderr=DEVNULL)
         return fout
 
 def spectro(audio):
@@ -279,26 +353,25 @@ def signal_to_noise(s_source, s_result): # s: power spectrogram
 def array_hash(audio):
     return sha1(audio).digest()
 
-def pad_to(src_audio, dst_audio):
-    if len(src_audio) < len(dst_audio):
-        return np.concatenate([src_audio, np.zeros(len(dst_audio) - len(src_audio))])
-    else:
-        return src_audio[:len(dst_audio)]
-
 def contour_points(x, y, direction): # direction: ne, nw, se, sw
     if len(x) <= 2:
         return np.arange(len(x))
 
-    if direction == "ne":
-        pstart, pend = np.argmax(x-y), np.argmin(x-y)
-    elif direction == "sw":
-        pstart, pend = np.argmin(x-y), np.argmax(x-y)
-    elif direction == "nw":
-        pstart, pend = np.argmax(x+y), np.argmin(x+y)
-    elif direction == "se":
-        pstart, pend = np.argmin(x+y), np.argmax(x+y)
-    else:
-        raise ValueError("unrecognized direction.")
+    if isinstance(direction, str):
+        if direction == "ne":
+            direction = np.pi / 4
+        elif direction == "sw":
+            direction = -3*np.pi / 4
+        elif direction == "nw":
+            direction = 3*np.pi / 4
+        elif direction == "se":
+            direction = -np.pi / 4
+        else:
+            raise ValueError("unrecognized direction.")
+
+    dsin, dcos = np.sin(direction), np.cos(direction)
+    projected = dsin*x - dcos*y
+    pstart, pend = np.argmax(projected), np.argmin(projected)
 
     hull = ConvexHull(np.array([x, y]).T)
     part_hull = []
