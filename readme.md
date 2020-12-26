@@ -22,25 +22,37 @@ For missing encoder or decoder, [`ffmpeg (4.3.1-2020-11-19 x64)`](https://www.gy
 ## Results
 > For detailed numbers, refer to [result.json](./result.json) or [result.md](./result.md)
 
-### Bass_tek2 - PLight (*Hardcore*)
+### PLight - Bass_tek 2 (*Hardcore*)
 
 - **Audio Spectrogram**
-![Spectrogram]("figs/Hands Up - Hommarju.wav.lossless.jpg")
+
+![Spectrogram](figs/PLight_-_Bass_tek_2.wav.jpg)
+
 - **Lossless Codecs Performance Comparison**
-![Lossless codecs comparison]("figs/Hands Up - Hommarju.wav.lossless.jpg")
+
+![Lossless codecs comparison](figs/PLight_-_Bass_tek_2.wav.lossless.jpg)
+
 - **Lossy Codecs Performance Comparison**
-![Lossy codecs comparison]("figs/Hands Up - Hommarju.wav.lossy.jpg")
+
+![Lossy codecs comparison](figs/PLight_-_Bass_tek_2.wav.lossy.jpg)
+
 - **Lossy Codecs Quality Comparison**
-![Lossy codecs comparison]("figs/Hands Up - Hommarju.wav.lossy_err.jpg")
+
+![Lossy codecs comparison](figs/PLight_-_Bass_tek_2.wav.lossy_err.jpg)
 
 <details><summary> Full Chart </summary>
 
 - **Lossless Codecs Performance Comparison**
-![Lossless codecs comparison]("figs/Hands Up - Hommarju.full.wav.lossless.jpg")
+
+![Lossless codecs comparison](figs/PLight_-_Bass_tek_2.full.wav.lossless.jpg)
+
 - **Lossy Codecs Performance Comparison**
-![Lossy codecs comparison]("figs/Hands Up - Hommarju.full.wav.lossy.jpg")
+
+![Lossy codecs comparison](figs/PLight_-_Bass_tek_2.full.wav.lossy.jpg)
+
 - **Lossy Codecs Quality Comparison**
-![Lossy codecs comparison]("figs/Hands Up - Hommarju.full.wav.lossy_err.jpg")
+
+![Lossy codecs comparison](figs/PLight_-_Bass_tek_2.full.wav.lossy_err.jpg)
 
 </details>
 

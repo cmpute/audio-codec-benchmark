@@ -234,6 +234,7 @@ def plot_results(result_path="result.json", tag_points=True, bitrate_as_x=False)
         raw_bitrate = fresults["metadata"]["nchannels"] * fresults["metadata"]["sample_width"]\
             * fresults["metadata"]["frame_rate"] / 1000
         xlabel = "average bitrate (kbps)" if bitrate_as_x else "compressed size ratio"
+        fbasename = "figs/" + osp.basename(fname).replace(' ', '_')
 
         # plot lossless results
         lossless_results = fresults["lossless"]
@@ -269,7 +270,7 @@ def plot_results(result_path="result.json", tag_points=True, bitrate_as_x=False)
         ax[1].grid(True)
         ax[1].legend()
         fig.tight_layout()
-        fig.savefig("figs/" + osp.basename(fname) + (".lossless_x64.jpg" if x64 else ".lossless.jpg"))
+        fig.savefig(fbasename + (".lossless_x64.jpg" if x64 else ".lossless.jpg"))
 
         lossy_results = fresults["lossy"]
         fig, ax = plt.subplots(ncols=2, figsize=(16, 8))
@@ -346,8 +347,8 @@ def plot_results(result_path="result.json", tag_points=True, bitrate_as_x=False)
         ax_err[1, 1].legend()
         fig.tight_layout()
         fig_err.tight_layout()
-        fig.savefig("figs/" + osp.basename(fname) + (".lossy_x64.jpg" if x64 else ".lossy.jpg"))
-        fig_err.savefig("figs/" + osp.basename(fname) + (".lossy_err_x64.jpg" if x64 else ".lossy_err.jpg"))
+        fig.savefig(fbasename + (".lossy_x64.jpg" if x64 else ".lossy.jpg"))
+        fig_err.savefig(fbasename + (".lossy_err_x64.jpg" if x64 else ".lossy_err.jpg"))
 
         plt.show()
 
