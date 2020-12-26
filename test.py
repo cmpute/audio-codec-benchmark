@@ -356,9 +356,9 @@ def save_table(result_path="result.json"):
     with open("result.json", "r") as jin:
         results = json.load(jin)
     if x64:
-        fmd = open("results_x64.md", "w")
+        fmd = open("result_x64.md", "w")
     else:
-        fmd = open("results.md", "w")
+        fmd = open("result.md", "w")
 
     fmd.write('''# Criteria
 - *Compression Ratio (CR)*: compressed file size / original uncompressed file size (lower the better)

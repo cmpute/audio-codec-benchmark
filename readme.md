@@ -19,10 +19,22 @@
 
 For missing encoder or decoder, [`ffmpeg (4.3.1-2020-11-19 x64)`](https://www.gyan.dev/ffmpeg/builds/) is used. Also note that OptimFrog encoding and decoding always crashes for me, and the dual stream encoding cannot preserve lossless audio (due to the crash , I guess).
 
-## Results
+# Run your own benchmark
+The script can run regardless of your OS, but the preset codecs and included binaries are for Windows. You will need Python 3 and following libraries installed to run the benchmark.
+- `numpy`
+- `scipy`
+- `librosa`
+- `matplotlib`
+
+There are several things you can customize in test.py
+- Change codecs parameters by change `lossless_codecs` and `lossy_codecs` dictionaries.
+- Choose x86 or x64 version of the codecs by switch `x64` variable.
+- Add your test audio files in `files` list.
+
+# Results
 > For detailed numbers, refer to [result.json](./result.json) or [result.md](./result.md)
 
-### PLight - Bass_tek 2 (*Hardcore*)
+## PLight - Bass_tek 2 (*Hardcore*)
 
 - **Audio Spectrogram**
 
@@ -40,7 +52,8 @@ For missing encoder or decoder, [`ffmpeg (4.3.1-2020-11-19 x64)`](https://www.gy
 
 ![Lossy codecs comparison](figs/PLight_-_Bass_tek_2.wav.lossy_err.jpg)
 
-<details><summary> Full Chart </summary>
+<details>
+<summary> Full Charts </summary>
 
 - **Lossless Codecs Performance Comparison**
 
