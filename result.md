@@ -4,7 +4,7 @@
 - *Weighted Spectrogram Error*: direct difference between A-weighted power spectrograms (lower the better)
 - *Signal-to-Noise Ratio (SNR)*: noise is calculated from signal power difference (higher the better)
 - *Weighted SNR*: noise is calculated from A-weighted signal power difference (higher the better)
-# Results for PLight - Bass_tek 2.wav
+# Results for `PLight - Bass_tek 2.wav`
 Audio Format: 2ch, 16-bit, 44100 Hz, 10295292 samples
 <table><tr><th rowspan="2">Format</th><th rowspan="2">Codec</th><th rowspan="2">Compression Ratio (%)</th><th rowspan="2">Encoding time (s)</th><th rowspan="2">Decoding time (s)</th><th colspan="2">Spectrogram Error (db)</th><th colspan="2">Signal-to-Noise Ratio (db)</th></tr>
 <tr><th>linear</th><th>weighted</th><th>linear</th><th>weighted</th></tr>
@@ -207,4 +207,209 @@ Audio Format: 2ch, 16-bit, 44100 Hz, 10295292 samples
 <tr><td rowspan="3">musepack</td><td>mpc (--standard)</td><td>12.134</td><td>4.620</td><td>1.172</td><td>3.965</td><td>0.693</td><td>14.366</td><td>13.941</td></tr>
 <tr><td>mpc (--extreme)</td><td>14.294</td><td>4.353</td><td>0.635</td><td>2.953</td><td>0.521</td><td>15.463</td><td>15.219</td></tr>
 <tr><td>mpc (--insane)</td><td>16.325</td><td>4.391</td><td>0.680</td><td>2.087</td><td>0.403</td><td>16.573</td><td>16.492</td></tr>
+</table>
+
+# Results for `久石让 - あの夏へ.wav`
+Audio Format: 2ch, 16-bit, 44100 Hz, 8370180 samples
+<table><tr><th rowspan="2">Format</th><th rowspan="2">Codec</th><th rowspan="2">Compression Ratio (%)</th><th rowspan="2">Encoding time (s)</th><th rowspan="2">Decoding time (s)</th><th colspan="2">Spectrogram Error (db)</th><th colspan="2">Signal-to-Noise Ratio (db)</th></tr>
+<tr><th>linear</th><th>weighted</th><th>linear</th><th>weighted</th></tr>
+<tr><td colspan="9" style="text-align:center"> Lossless Codecs </td></tr>
+<tr><td rowspan="3">optimFrog</td><td>ofr (--preset 0)</td><td>44.761</td><td>1.184</td><td>1.717</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>ofr (--preset 5)</td><td>43.409</td><td>5.129</td><td>4.221</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>ofr (--preset 10)</td><td>42.407</td><td>23.404</td><td>11.808</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td rowspan="8">flac</td><td>flac (-0)</td><td>52.850</td><td>0.223</td><td>0.173</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>flac (-1)</td><td>52.825</td><td>0.222</td><td>0.174</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>flac (-2)</td><td>52.760</td><td>0.252</td><td>0.169</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>flac (-3)</td><td>46.275</td><td>0.219</td><td>0.181</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>flac (-4)</td><td>45.876</td><td>0.261</td><td>0.191</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>flac (-5)</td><td>45.829</td><td>0.283</td><td>0.196</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>flac (-6)</td><td>45.794</td><td>0.383</td><td>0.189</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>flac (-7)</td><td>45.712</td><td>0.502</td><td>0.208</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td rowspan="5">ape</td><td>mac (-c1000)</td><td>46.523</td><td>1.113</td><td>1.310</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>mac (-c2000)</td><td>44.916</td><td>1.568</td><td>1.745</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>mac (-c3000)</td><td>44.467</td><td>1.642</td><td>1.818</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>mac (-c4000)</td><td>43.645</td><td>2.391</td><td>2.429</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>mac (-c5000)</td><td>43.208</td><td>4.681</td><td>4.422</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td rowspan="6">wavpack</td><td>wavpack (-f)</td><td>52.526</td><td>0.444</td><td>0.388</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>wavpack (default)</td><td>47.231</td><td>0.483</td><td>0.420</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>wavpack (-h)</td><td>46.621</td><td>0.630</td><td>0.520</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>wavpack (-hh)</td><td>45.754</td><td>0.773</td><td>0.650</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>wavpack (-h -x1)</td><td>45.952</td><td>1.041</td><td>0.503</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>wavpack (-hh -x3)</td><td>45.464</td><td>4.678</td><td>0.612</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td rowspan="4">wavpack(hybrid)</td><td>wavpack (-c -b192 -f)</td><td>54.446</td><td>0.745</td><td>0.553</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>wavpack (-c -b192)</td><td>49.505</td><td>0.834</td><td>0.634</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>wavpack (-c -b192 -h)</td><td>48.972</td><td>1.015</td><td>0.801</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>wavpack (-c -b192 -hh)</td><td>48.562</td><td>1.201</td><td>0.961</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td rowspan="30">tak</td><td>takc (-p0 -tn1)</td><td>46.511</td><td>0.197</td><td>0.209</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>takc (-p0 -tn4)</td><td>46.511</td><td>0.085</td><td>0.204</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>takc (-p0e -tn1)</td><td>46.415</td><td>0.213</td><td>0.202</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>takc (-p0e -tn4)</td><td>46.415</td><td>0.081</td><td>0.203</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>takc (-p0m -tn1)</td><td>46.331</td><td>0.356</td><td>0.204</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>takc (-p0m -tn4)</td><td>46.331</td><td>0.104</td><td>0.203</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>takc (-p1 -tn1)</td><td>45.166</td><td>0.196</td><td>0.204</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>takc (-p1 -tn4)</td><td>45.166</td><td>0.079</td><td>0.208</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>takc (-p1e -tn1)</td><td>45.116</td><td>0.314</td><td>0.208</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>takc (-p1e -tn4)</td><td>45.116</td><td>0.098</td><td>0.207</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>takc (-p1m -tn1)</td><td>45.051</td><td>0.491</td><td>0.204</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>takc (-p1m -tn4)</td><td>45.051</td><td>0.140</td><td>0.214</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>takc (-p2 -tn1)</td><td>44.805</td><td>0.258</td><td>0.242</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>takc (-p2 -tn4)</td><td>44.805</td><td>0.081</td><td>0.243</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>takc (-p2e -tn1)</td><td>44.766</td><td>0.455</td><td>0.240</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>takc (-p2e -tn4)</td><td>44.766</td><td>0.140</td><td>0.240</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>takc (-p2m -tn1)</td><td>44.694</td><td>0.828</td><td>0.242</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>takc (-p2m -tn4)</td><td>44.694</td><td>0.224</td><td>0.241</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>takc (-p3 -tn1)</td><td>44.222</td><td>0.508</td><td>0.245</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>takc (-p3 -tn4)</td><td>44.222</td><td>0.143</td><td>0.253</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>takc (-p3e -tn1)</td><td>44.179</td><td>0.633</td><td>0.247</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>takc (-p3e -tn4)</td><td>44.179</td><td>0.181</td><td>0.252</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>takc (-p3m -tn1)</td><td>44.158</td><td>1.209</td><td>0.247</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>takc (-p3m -tn4)</td><td>44.158</td><td>0.328</td><td>0.251</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>takc (-p4 -tn1)</td><td>43.855</td><td>0.810</td><td>0.280</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>takc (-p4 -tn4)</td><td>43.855</td><td>0.228</td><td>0.284</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>takc (-p4e -tn1)</td><td>43.842</td><td>0.967</td><td>0.278</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>takc (-p4e -tn4)</td><td>43.842</td><td>0.263</td><td>0.278</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>takc (-p4m -tn1)</td><td>43.823</td><td>1.812</td><td>0.281</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>takc (-p4m -tn4)</td><td>43.823</td><td>0.499</td><td>0.281</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td rowspan="1">tta</td><td>tta (default)</td><td>46.625</td><td>0.380</td><td>0.421</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td rowspan="1">wma</td><td>wmaencode (-c lsl)</td><td>48.987</td><td>1.338</td><td>0.574</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td rowspan="12">lossyflac(hybrid)</td><td>lossyflac (-q I -C|-1)</td><td>55.305</td><td>4.250</td><td>1.129</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>lossyflac (-q I -C|-4)</td><td>49.825</td><td>4.308</td><td>1.164</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>lossyflac (-q I -C|-7)</td><td>49.500</td><td>4.973</td><td>1.172</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>lossyflac (-q H -C|-1)</td><td>58.561</td><td>7.766</td><td>1.168</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>lossyflac (-q H -C|-4)</td><td>52.949</td><td>7.855</td><td>1.197</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>lossyflac (-q H -C|-7)</td><td>52.548</td><td>8.731</td><td>1.195</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>lossyflac (-q S -C|-1)</td><td>59.316</td><td>8.391</td><td>1.205</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>lossyflac (-q S -C|-4)</td><td>53.475</td><td>8.488</td><td>1.198</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>lossyflac (-q S -C|-7)</td><td>52.983</td><td>9.390</td><td>1.195</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>lossyflac (-q X -C|-1)</td><td>62.541</td><td>10.312</td><td>1.188</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>lossyflac (-q X -C|-4)</td><td>55.441</td><td>10.474</td><td>1.228</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>lossyflac (-q X -C|-7)</td><td>54.876</td><td>11.526</td><td>1.225</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td rowspan="4">lossytak(hybrid)</td><td>lossytak (-q I -C|-p2m)</td><td>48.306</td><td>6.262</td><td>1.197</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>lossytak (-q H -C|-p2m)</td><td>49.989</td><td>10.367</td><td>1.251</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>lossytak (-q S -C|-p2m)</td><td>50.141</td><td>11.059</td><td>1.346</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>lossytak (-q X -C|-p2m)</td><td>51.469</td><td>13.289</td><td>1.263</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td rowspan="12">lossywv(hybrid)</td><td>lossywv (-q I -C|-f)</td><td>55.301</td><td>4.564</td><td>1.350</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>lossywv (-q I -C|)</td><td>49.929</td><td>5.792</td><td>1.447</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>lossywv (-q I -C|-h)</td><td>49.322</td><td>4.993</td><td>1.618</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>lossywv (-q H -C|-f)</td><td>60.330</td><td>8.226</td><td>1.688</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>lossywv (-q H -C|)</td><td>54.363</td><td>8.443</td><td>1.561</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>lossywv (-q H -C|-h)</td><td>54.046</td><td>8.923</td><td>1.767</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>lossywv (-q S -C|-f)</td><td>60.849</td><td>8.897</td><td>1.489</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>lossywv (-q S -C|)</td><td>54.590</td><td>9.184</td><td>1.584</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>lossywv (-q S -C|-h)</td><td>54.290</td><td>9.646</td><td>1.790</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>lossywv (-q X -C|-f)</td><td>64.354</td><td>10.960</td><td>1.566</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>lossywv (-q X -C|)</td><td>56.702</td><td>11.308</td><td>1.672</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>lossywv (-q X -C|-h)</td><td>56.356</td><td>11.851</td><td>1.897</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td rowspan="2">alac</td><td>refalac (default)</td><td>47.568</td><td>0.810</td><td>0.393</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td>refalac (--fast)</td><td>48.031</td><td>0.514</td><td>0.478</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+<tr><td colspan="9" style="text-align:center"> Lossy Codecs </td></tr><tr><td rowspan="10">mp3(CBR)</td><td>lame (-b128 -q2)</td><td>9.073</td><td>3.182</td><td>0.306</td><td>0.756</td><td>0.824</td><td>9.649</td><td>12.562</td></tr>
+<tr><td>lame (-b128 -q7)</td><td>9.073</td><td>0.968</td><td>0.288</td><td>0.636</td><td>0.366</td><td>9.978</td><td>15.619</td></tr>
+<tr><td>lame (-b160 -q2)</td><td>11.341</td><td>3.615</td><td>0.328</td><td>0.597</td><td>0.605</td><td>9.857</td><td>13.972</td></tr>
+<tr><td>lame (-b160 -q7)</td><td>11.341</td><td>0.974</td><td>0.301</td><td>0.481</td><td>0.249</td><td>10.027</td><td>17.192</td></tr>
+<tr><td>lame (-b192 -q2)</td><td>13.609</td><td>2.392</td><td>0.336</td><td>0.440</td><td>0.335</td><td>12.057</td><td>17.771</td></tr>
+<tr><td>lame (-b192 -q7)</td><td>13.609</td><td>1.024</td><td>0.328</td><td>0.388</td><td>0.186</td><td>12.180</td><td>19.574</td></tr>
+<tr><td>lame (-b256 -q2)</td><td>18.146</td><td>2.461</td><td>0.371</td><td>0.302</td><td>0.203</td><td>20.686</td><td>20.322</td></tr>
+<tr><td>lame (-b256 -q7)</td><td>18.146</td><td>1.020</td><td>0.356</td><td>0.276</td><td>0.124</td><td>22.746</td><td>20.313</td></tr>
+<tr><td>lame (-b320 -q2)</td><td>22.682</td><td>2.675</td><td>0.402</td><td>0.221</td><td>0.131</td><td>22.989</td><td>22.035</td></tr>
+<tr><td>lame (-b320 -q7)</td><td>22.682</td><td>1.036</td><td>0.388</td><td>0.207</td><td>0.082</td><td>24.605</td><td>24.419</td></tr>
+<tr><td rowspan="14">mp3(VBR)</td><td>lame (-V0 -q2)</td><td>18.961</td><td>1.794</td><td>0.381</td><td>0.293</td><td>0.220</td><td>21.562</td><td>21.124</td></tr>
+<tr><td>lame (-V0 -q7)</td><td>15.153</td><td>1.024</td><td>0.362</td><td>0.377</td><td>0.336</td><td>20.458</td><td>19.473</td></tr>
+<tr><td>lame (-V1 -q2)</td><td>14.894</td><td>1.659</td><td>0.353</td><td>0.406</td><td>0.353</td><td>18.076</td><td>17.457</td></tr>
+<tr><td>lame (-V1 -q7)</td><td>11.365</td><td>1.009</td><td>0.326</td><td>0.545</td><td>0.616</td><td>16.228</td><td>15.481</td></tr>
+<tr><td>lame (-V2 -q2)</td><td>12.621</td><td>1.615</td><td>0.336</td><td>0.494</td><td>0.455</td><td>16.858</td><td>15.607</td></tr>
+<tr><td>lame (-V2 -q7)</td><td>9.988</td><td>0.993</td><td>0.305</td><td>0.624</td><td>0.736</td><td>15.335</td><td>13.493</td></tr>
+<tr><td>lame (-V3 -q2)</td><td>11.399</td><td>1.573</td><td>0.324</td><td>0.545</td><td>0.519</td><td>16.199</td><td>14.471</td></tr>
+<tr><td>lame (-V3 -q7)</td><td>9.242</td><td>0.988</td><td>0.311</td><td>0.670</td><td>0.827</td><td>14.842</td><td>11.912</td></tr>
+<tr><td>lame (-V4 -q2)</td><td>9.756</td><td>1.516</td><td>0.303</td><td>0.641</td><td>0.634</td><td>15.164</td><td>13.712</td></tr>
+<tr><td>lame (-V4 -q7)</td><td>8.175</td><td>0.989</td><td>0.288</td><td>0.744</td><td>0.909</td><td>14.192</td><td>13.157</td></tr>
+<tr><td>lame (-V5 -q2)</td><td>7.757</td><td>1.402</td><td>0.316</td><td>0.777</td><td>0.816</td><td>13.815</td><td>13.200</td></tr>
+<tr><td>lame (-V5 -q7)</td><td>6.751</td><td>0.957</td><td>0.271</td><td>0.855</td><td>1.128</td><td>13.003</td><td>11.639</td></tr>
+<tr><td>lame (-V6 -q2)</td><td>6.432</td><td>1.336</td><td>0.288</td><td>0.897</td><td>1.067</td><td>12.219</td><td>11.603</td></tr>
+<tr><td>lame (-V6 -q7)</td><td>5.898</td><td>0.951</td><td>0.283</td><td>0.939</td><td>1.380</td><td>11.696</td><td>10.423</td></tr>
+<tr><td rowspan="5">wavpack</td><td>wavpack (-b128)</td><td>14.189</td><td>0.617</td><td>0.434</td><td>0.744</td><td>0.233</td><td>21.498</td><td>21.185</td></tr>
+<tr><td>wavpack (-b160)</td><td>14.189</td><td>0.609</td><td>0.432</td><td>0.744</td><td>0.233</td><td>21.498</td><td>21.185</td></tr>
+<tr><td>wavpack (-b192)</td><td>14.189</td><td>0.609</td><td>0.432</td><td>0.744</td><td>0.233</td><td>21.498</td><td>21.185</td></tr>
+<tr><td>wavpack (-b256)</td><td>18.753</td><td>0.717</td><td>0.530</td><td>0.291</td><td>0.107</td><td>25.404</td><td>24.152</td></tr>
+<tr><td>wavpack (-b320)</td><td>23.781</td><td>0.773</td><td>0.558</td><td>0.133</td><td>0.055</td><td>28.566</td><td>28.204</td></tr>
+<tr><td rowspan="12">wma(CBR)</td><td>wmaencode (-c pro -m cbr -b 128)</td><td>9.154</td><td>1.764</td><td>0.149</td><td>0.628</td><td>0.498</td><td>15.337</td><td>14.631</td></tr>
+<tr><td>wmaencode (-c pro -m cbr -b 160)</td><td>11.426</td><td>1.780</td><td>0.156</td><td>0.514</td><td>0.409</td><td>16.779</td><td>15.690</td></tr>
+<tr><td>wmaencode (-c pro -m cbr -b 192)</td><td>13.699</td><td>1.822</td><td>0.166</td><td>0.407</td><td>0.339</td><td>17.765</td><td>17.012</td></tr>
+<tr><td>wmaencode (-c pro -m cbr -b 256)</td><td>18.243</td><td>1.967</td><td>0.183</td><td>0.286</td><td>0.257</td><td>19.654</td><td>18.757</td></tr>
+<tr><td>wmaencode (-c pro -m cbr -b 384)</td><td>27.333</td><td>2.516</td><td>0.208</td><td>0.116</td><td>0.102</td><td>23.531</td><td>22.869</td></tr>
+<tr><td>wmaencode (-c pro -m cbr -b 440)</td><td>31.311</td><td>2.387</td><td>0.213</td><td>0.082</td><td>0.075</td><td>25.096</td><td>24.314</td></tr>
+<tr><td>wmaencode (-c pro -m cbr2pass -b 128)</td><td>9.154</td><td>4.871</td><td>0.148</td><td>0.601</td><td>0.479</td><td>15.914</td><td>15.056</td></tr>
+<tr><td>wmaencode (-c pro -m cbr2pass -b 160)</td><td>11.426</td><td>5.086</td><td>0.164</td><td>0.490</td><td>0.393</td><td>17.368</td><td>16.187</td></tr>
+<tr><td>wmaencode (-c pro -m cbr2pass -b 192)</td><td>13.699</td><td>5.484</td><td>0.168</td><td>0.389</td><td>0.335</td><td>18.228</td><td>16.350</td></tr>
+<tr><td>wmaencode (-c pro -m cbr2pass -b 256)</td><td>18.243</td><td>6.282</td><td>0.185</td><td>0.275</td><td>0.250</td><td>19.939</td><td>19.214</td></tr>
+<tr><td>wmaencode (-c pro -m cbr2pass -b 384)</td><td>27.333</td><td>7.489</td><td>0.210</td><td>0.110</td><td>0.099</td><td>23.963</td><td>22.975</td></tr>
+<tr><td>wmaencode (-c pro -m cbr2pass -b 440)</td><td>31.311</td><td>7.054</td><td>0.215</td><td>0.075</td><td>0.069</td><td>25.661</td><td>24.577</td></tr>
+<tr><td rowspan="12">wma(VBR)</td><td>wmaencode (-c pro -m vbr -q 10)</td><td>3.625</td><td>4.316</td><td>0.126</td><td>1.446</td><td>1.909</td><td>9.093</td><td>8.548</td></tr>
+<tr><td>wmaencode (-c pro -m vbr -q 25)</td><td>5.711</td><td>2.412</td><td>0.134</td><td>0.878</td><td>0.869</td><td>14.092</td><td>13.196</td></tr>
+<tr><td>wmaencode (-c pro -m vbr -q 50)</td><td>7.479</td><td>2.435</td><td>0.141</td><td>0.639</td><td>0.637</td><td>15.590</td><td>14.639</td></tr>
+<tr><td>wmaencode (-c pro -m vbr -q 75)</td><td>9.265</td><td>2.493</td><td>0.151</td><td>0.545</td><td>0.595</td><td>16.158</td><td>15.559</td></tr>
+<tr><td>wmaencode (-c pro -m vbr -q 90)</td><td>12.479</td><td>2.568</td><td>0.160</td><td>0.445</td><td>0.476</td><td>17.442</td><td>16.463</td></tr>
+<tr><td>wmaencode (-c pro -m vbr -q 98)</td><td>19.919</td><td>2.644</td><td>0.209</td><td>0.201</td><td>0.206</td><td>21.262</td><td>19.002</td></tr>
+<tr><td>wmaencode (-c pro -m vbr2pass -q 10)</td><td>9.138</td><td>4.985</td><td>0.148</td><td>0.512</td><td>0.466</td><td>16.950</td><td>15.628</td></tr>
+<tr><td>wmaencode (-c pro -m vbr2pass -q 25)</td><td>9.138</td><td>5.077</td><td>0.157</td><td>0.512</td><td>0.466</td><td>16.950</td><td>15.628</td></tr>
+<tr><td>wmaencode (-c pro -m vbr2pass -q 50)</td><td>9.138</td><td>5.004</td><td>0.150</td><td>0.512</td><td>0.466</td><td>16.950</td><td>15.628</td></tr>
+<tr><td>wmaencode (-c pro -m vbr2pass -q 75)</td><td>9.138</td><td>4.905</td><td>0.149</td><td>0.512</td><td>0.466</td><td>16.950</td><td>15.628</td></tr>
+<tr><td>wmaencode (-c pro -m vbr2pass -q 90)</td><td>9.138</td><td>4.910</td><td>0.153</td><td>0.512</td><td>0.466</td><td>16.950</td><td>15.628</td></tr>
+<tr><td>wmaencode (-c pro -m vbr2pass -q 98)</td><td>9.138</td><td>4.940</td><td>0.153</td><td>0.512</td><td>0.466</td><td>16.950</td><td>15.628</td></tr>
+<tr><td rowspan="5">opus</td><td>opus (--bitrate 64)</td><td>5.768</td><td>2.036</td><td>1.012</td><td>1.175</td><td>1.755</td><td>9.767</td><td>8.934</td></tr>
+<tr><td>opus (--bitrate 80)</td><td>7.009</td><td>2.144</td><td>1.034</td><td>0.999</td><td>1.352</td><td>11.005</td><td>10.146</td></tr>
+<tr><td>opus (--bitrate 96)</td><td>8.198</td><td>2.230</td><td>1.092</td><td>0.887</td><td>1.157</td><td>11.694</td><td>10.772</td></tr>
+<tr><td>opus (--bitrate 128)</td><td>10.494</td><td>2.310</td><td>1.101</td><td>0.703</td><td>0.869</td><td>13.093</td><td>12.174</td></tr>
+<tr><td>opus (--bitrate 160)</td><td>12.809</td><td>2.405</td><td>1.148</td><td>0.557</td><td>0.724</td><td>13.923</td><td>13.105</td></tr>
+<tr><td rowspan="12">lossyflac</td><td>lossyflac (-q I|-1)</td><td>51.658</td><td>4.063</td><td>0.184</td><td>0.006</td><td>0.002</td><td>35.425</td><td>35.435</td></tr>
+<tr><td>lossyflac (-q I|-4)</td><td>46.145</td><td>4.119</td><td>0.210</td><td>0.006</td><td>0.002</td><td>35.425</td><td>35.435</td></tr>
+<tr><td>lossyflac (-q I|-7)</td><td>45.873</td><td>4.678</td><td>0.209</td><td>0.006</td><td>0.002</td><td>35.425</td><td>35.435</td></tr>
+<tr><td>lossyflac (-q H|-1)</td><td>45.007</td><td>7.558</td><td>0.191</td><td>0.032</td><td>0.022</td><td>29.324</td><td>28.024</td></tr>
+<tr><td>lossyflac (-q H|-4)</td><td>39.584</td><td>7.599</td><td>0.203</td><td>0.032</td><td>0.022</td><td>29.324</td><td>28.024</td></tr>
+<tr><td>lossyflac (-q H|-7)</td><td>39.385</td><td>8.108</td><td>0.206</td><td>0.032</td><td>0.022</td><td>29.324</td><td>28.024</td></tr>
+<tr><td>lossyflac (-q S|-1)</td><td>42.657</td><td>8.156</td><td>0.187</td><td>0.045</td><td>0.033</td><td>28.009</td><td>26.144</td></tr>
+<tr><td>lossyflac (-q S|-4)</td><td>37.273</td><td>8.161</td><td>0.210</td><td>0.045</td><td>0.033</td><td>28.009</td><td>26.144</td></tr>
+<tr><td>lossyflac (-q S|-7)</td><td>37.057</td><td>8.706</td><td>0.208</td><td>0.045</td><td>0.033</td><td>28.009</td><td>26.144</td></tr>
+<tr><td>lossyflac (-q X|-1)</td><td>29.367</td><td>10.151</td><td>0.182</td><td>0.293</td><td>0.190</td><td>21.176</td><td>18.572</td></tr>
+<tr><td>lossyflac (-q X|-4)</td><td>24.759</td><td>10.142</td><td>0.200</td><td>0.293</td><td>0.190</td><td>21.176</td><td>18.572</td></tr>
+<tr><td>lossyflac (-q X|-7)</td><td>24.619</td><td>10.754</td><td>0.201</td><td>0.293</td><td>0.190</td><td>21.176</td><td>18.572</td></tr>
+<tr><td rowspan="4">lossytak</td><td>lossytak (-q I|-p2m)</td><td>44.790</td><td>5.625</td><td>0.236</td><td>0.006</td><td>0.002</td><td>35.425</td><td>35.435</td></tr>
+<tr><td>lossytak (-q H|-p2m)</td><td>38.254</td><td>9.139</td><td>0.234</td><td>0.032</td><td>0.022</td><td>29.324</td><td>28.024</td></tr>
+<tr><td>lossytak (-q S|-p2m)</td><td>35.909</td><td>9.721</td><td>0.233</td><td>0.045</td><td>0.033</td><td>28.009</td><td>26.144</td></tr>
+<tr><td>lossytak (-q X|-p2m)</td><td>22.938</td><td>11.670</td><td>0.217</td><td>0.293</td><td>0.190</td><td>21.176</td><td>18.572</td></tr>
+<tr><td rowspan="12">lossywv</td><td>lossywv (-q I|-f)</td><td>51.504</td><td>4.305</td><td>0.366</td><td>0.006</td><td>0.002</td><td>35.425</td><td>35.435</td></tr>
+<tr><td>lossywv (-q I|)</td><td>46.235</td><td>4.391</td><td>0.467</td><td>0.006</td><td>0.002</td><td>35.425</td><td>35.435</td></tr>
+<tr><td>lossywv (-q I|-h)</td><td>45.697</td><td>4.648</td><td>0.519</td><td>0.006</td><td>0.002</td><td>35.425</td><td>35.435</td></tr>
+<tr><td>lossywv (-q H|-f)</td><td>46.494</td><td>7.889</td><td>0.376</td><td>0.032</td><td>0.022</td><td>29.324</td><td>28.024</td></tr>
+<tr><td>lossywv (-q H|)</td><td>41.368</td><td>8.083</td><td>0.478</td><td>0.032</td><td>0.022</td><td>29.324</td><td>28.024</td></tr>
+<tr><td>lossywv (-q H|-h)</td><td>41.025</td><td>8.428</td><td>0.534</td><td>0.032</td><td>0.022</td><td>29.324</td><td>28.024</td></tr>
+<tr><td>lossywv (-q S|-f)</td><td>44.313</td><td>8.529</td><td>0.376</td><td>0.045</td><td>0.033</td><td>28.009</td><td>26.144</td></tr>
+<tr><td>lossywv (-q S|)</td><td>39.219</td><td>8.717</td><td>0.473</td><td>0.045</td><td>0.033</td><td>28.009</td><td>26.144</td></tr>
+<tr><td>lossywv (-q S|-h)</td><td>38.912</td><td>9.116</td><td>0.539</td><td>0.045</td><td>0.033</td><td>28.009</td><td>26.144</td></tr>
+<tr><td>lossywv (-q X|-f)</td><td>32.060</td><td>10.606</td><td>0.370</td><td>0.293</td><td>0.190</td><td>21.176</td><td>18.572</td></tr>
+<tr><td>lossywv (-q X|)</td><td>27.377</td><td>10.866</td><td>0.473</td><td>0.293</td><td>0.190</td><td>21.176</td><td>18.572</td></tr>
+<tr><td>lossywv (-q X|-h)</td><td>27.375</td><td>11.261</td><td>0.551</td><td>0.293</td><td>0.190</td><td>21.176</td><td>18.572</td></tr>
+<tr><td rowspan="8">aac(VBR)</td><td>neroaac (-q 0.1)</td><td>1.682</td><td>1.320</td><td>0.637</td><td>1.778</td><td>2.609</td><td>7.335</td><td>6.495</td></tr>
+<tr><td>neroaac (-q 0.3)</td><td>5.787</td><td>2.558</td><td>0.540</td><td>0.978</td><td>0.768</td><td>13.445</td><td>12.993</td></tr>
+<tr><td>neroaac (-q 0.5)</td><td>11.684</td><td>2.553</td><td>0.267</td><td>0.484</td><td>0.575</td><td>15.643</td><td>14.743</td></tr>
+<tr><td>neroaac (-q 0.7)</td><td>18.125</td><td>2.573</td><td>0.318</td><td>0.269</td><td>0.411</td><td>16.073</td><td>15.259</td></tr>
+<tr><td>neroaac (-q 0.9)</td><td>25.978</td><td>2.747</td><td>0.355</td><td>0.186</td><td>0.390</td><td>16.504</td><td>15.670</td></tr>
+<tr><td>qaac (-V 31)</td><td>5.016</td><td>1.784</td><td>0.219</td><td>1.266</td><td>1.941</td><td>8.907</td><td>7.916</td></tr>
+<tr><td>qaac (-V 63)</td><td>9.560</td><td>1.902</td><td>0.264</td><td>0.683</td><td>0.776</td><td>13.421</td><td>12.543</td></tr>
+<tr><td>qaac (-V 95)</td><td>14.976</td><td>1.967</td><td>0.285</td><td>0.424</td><td>0.436</td><td>15.896</td><td>14.685</td></tr>
+<tr><td rowspan="10">aac(CBR)</td><td>neroaac (-cbr 128)</td><td>0.908</td><td>1.154</td><td>0.602</td><td>2.575</td><td>4.117</td><td>4.780</td><td>4.247</td></tr>
+<tr><td>neroaac (-cbr 160)</td><td>0.908</td><td>1.180</td><td>0.597</td><td>2.575</td><td>4.117</td><td>4.780</td><td>4.247</td></tr>
+<tr><td>neroaac (-cbr 192)</td><td>0.908</td><td>1.159</td><td>0.595</td><td>2.575</td><td>4.117</td><td>4.780</td><td>4.247</td></tr>
+<tr><td>neroaac (-cbr 256)</td><td>0.908</td><td>1.159</td><td>0.596</td><td>2.575</td><td>4.117</td><td>4.780</td><td>4.247</td></tr>
+<tr><td>neroaac (-cbr 320)</td><td>0.908</td><td>1.156</td><td>0.603</td><td>2.575</td><td>4.117</td><td>4.780</td><td>4.247</td></tr>
+<tr><td>qaac (-c 128)</td><td>9.182</td><td>1.933</td><td>0.247</td><td>0.747</td><td>0.860</td><td>12.895</td><td>12.130</td></tr>
+<tr><td>qaac (-c 160)</td><td>11.451</td><td>1.975</td><td>0.264</td><td>0.594</td><td>0.659</td><td>14.064</td><td>13.262</td></tr>
+<tr><td>qaac (-c 192)</td><td>13.719</td><td>2.003</td><td>0.287</td><td>0.513</td><td>0.542</td><td>14.920</td><td>13.728</td></tr>
+<tr><td>qaac (-c 256)</td><td>18.256</td><td>2.097</td><td>0.299</td><td>0.360</td><td>0.421</td><td>16.306</td><td>15.343</td></tr>
+<tr><td>qaac (-c 320)</td><td>22.793</td><td>2.226</td><td>0.310</td><td>0.226</td><td>0.248</td><td>18.001</td><td>17.034</td></tr>
+<tr><td rowspan="3">vorbis</td><td>oggenc (-q 2)</td><td>4.838</td><td>3.668</td><td>0.151</td><td>1.235</td><td>1.821</td><td>11.147</td><td>10.347</td></tr>
+<tr><td>oggenc (-q 7)</td><td>10.788</td><td>2.865</td><td>0.165</td><td>0.477</td><td>0.682</td><td>15.244</td><td>14.480</td></tr>
+<tr><td>oggenc (-q 10)</td><td>24.667</td><td>3.103</td><td>0.206</td><td>0.166</td><td>0.251</td><td>18.222</td><td>18.569</td></tr>
+<tr><td rowspan="3">musepack</td><td>mpc (--standard)</td><td>11.839</td><td>2.697</td><td>0.391</td><td>0.557</td><td>0.482</td><td>16.371</td><td>15.138</td></tr>
+<tr><td>mpc (--extreme)</td><td>14.679</td><td>2.716</td><td>0.416</td><td>0.454</td><td>0.341</td><td>17.961</td><td>16.623</td></tr>
+<tr><td>mpc (--insane)</td><td>17.242</td><td>2.710</td><td>0.382</td><td>0.373</td><td>0.246</td><td>19.475</td><td>18.167</td></tr>
 </table>

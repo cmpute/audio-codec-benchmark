@@ -8,12 +8,12 @@
 - TTA (tta 2.3): Downloaded from https://sourceforge.net/projects/tta/files/tta/ttaenc-win/
 - WMA (WmaEncoder 0.2.9c): Downloaded from https://hydrogenaud.io/index.php/topic,90519.0.html
 - lossyWAV (lossyWAV 1.4.2): Downloaded from https://wiki.hydrogenaud.io/index.php?title=LossyWAV
-- ALAC (refalac v2.71): Downloaded from https://github.com/nu774/qaac/releases/tag
+- ALAC (refalac v2.71): Downloaded from https://github.com/nu774/qaac/releases
 - OptimFrog (ofc & ofs v5.100): Downloaded from http://losslessaudio.org/Downloads.php
 - Opus (opusenc & opusdec 1.3): Downloaded from https://opus-codec.org/downloads/
 - Ogg Vorbis (oggenc 2.88): Downloaded from https://www.rarewares.org/ogg-oggenc.php
 - AAC
-  - (qaac v2.71): Downloaded from https://github.com/nu774/qaac/releases/tag, (follow [instructions here](https://hydrogenaud.io/index.php?topic=117089.0))
+  - (qaac v2.71): Downloaded from https://github.com/nu774/qaac/releases, (follow [instructions here](https://hydrogenaud.io/index.php?topic=117089.0))
   - (NeroAac v1.5.1): Downloaded from http://wiki.hydrogenaud.io/index.php?title=Nero_AAC
 - Musepack (mpcenc 1.30.0 & mpcdec 1.0.0): Downloaded from https://musepack.net/index.php?pg=win
 

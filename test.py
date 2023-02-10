@@ -16,6 +16,7 @@ from testlib import *
 x64 = False # <---- Change to x64 codec implementations
 files = [ # <---- Put your audio files in here (need .wav format)
     "PLight - Bass_tek 2.wav",
+    "久石让 - あの夏へ.wav",
 ]
 
 # encoder paths
@@ -368,7 +369,7 @@ def save_table(result_path="result.json"):
 - *Weighted SNR*: noise is calculated from A-weighted signal power difference (higher the better)
 ''')
     for fname, fresults in results.items():
-        fmd.write("# Results for %s\n" % fname)
+        fmd.write("# Results for `%s`\n" % fname)
         fmd.write("Audio Format: %dch, %d-bit, %d Hz, %d samples\n" % (
             fresults["metadata"]["nchannels"],
             fresults["metadata"]["sample_width"],
@@ -411,7 +412,7 @@ def save_table(result_path="result.json"):
                 fmd.write('<td>%.3f</td>' % item['weighted_snr'])
                 fmd.write('</tr>\n')
 
-        fmd.write('</table>')
+        fmd.write('</table>\n\n')
 
     fmd.close()
 

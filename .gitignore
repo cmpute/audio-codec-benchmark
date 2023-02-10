@@ -1,9 +1,22 @@
 .vscode/
+__pycache__/
 
 # audio files
-*.wav
 *.ape
 *.flac
+*.m4a
 *.mp3
+*.mpc
+*.ofr
+*.ogg
+*.opus
+*.tak
+*.tta
+*.wav
+*.wma
 *.wv
 *.wvc
+
+# Support files for qaac
+codecs/qaac/QTfiles
+codecs/qaac_x64/QTfiles64
