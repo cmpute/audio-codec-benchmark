@@ -50,7 +50,7 @@ When calculating the compressed file size for hybrid lossless audio codec (like 
 
 > Note that not all results are shown in the plots since they will make the figure looks messy. Only best results in a series of codecs are plotted. For example in *encoding time - average bitrate* figure, only left-bottom data points are shown for an audio codec. For codec parameters in the figure, there's a *Full Charts* section below figures for each audio file. For complete results with numbers, please refer to [result.json](./result.json) or [result.md](./result.md)
 
-## PLight - Bass_tek 2 (*Hardcore*)
+## PLight - Bass_tek 2 (*Genre: Hardcore*)
 
 - **Audio Spectrogram**
 
@@ -85,6 +85,113 @@ When calculating the compressed file size for hybrid lossless audio codec (like 
 
 </details>
 
+
+## 久石让 - あの夏へ (*Genre: Acoustic*)
+
+- **Audio Spectrogram**
+
+![Spectrogram](figs/久石让_-_あの夏へ.wav.jpg)
+
+- **Lossless Codecs Performance Comparison**
+
+![Lossless codecs comparison](figs/久石让_-_あの夏へ.wav.lossless.jpg)
+
+- **Lossy Codecs Performance Comparison**
+
+![Lossy codecs comparison](figs/久石让_-_あの夏へ.wav.lossy.jpg)
+
+- **Lossy Codecs Quality Comparison**
+
+![Lossy codecs comparison](figs/久石让_-_あの夏へ.wav.lossy_err.jpg)
+
+<details>
+<summary> Full Charts </summary>
+
+- **Lossless Codecs Performance Comparison**
+
+![Lossless codecs comparison](figs/久石让_-_あの夏へ.full.wav.lossless.jpg)
+
+- **Lossy Codecs Performance Comparison**
+
+![Lossy codecs comparison](figs/久石让_-_あの夏へ.full.wav.lossy.jpg)
+
+- **Lossy Codecs Quality Comparison**
+
+![Lossy codecs comparison](figs/久石让_-_あの夏へ.full.wav.lossy_err.jpg)
+
+</details>
+
+
+## Aimer - Ref:rain (*Genre: Pop*)
+
+- **Audio Spectrogram**
+
+![Spectrogram](figs/Aimer_-_Ref_rain.wav.jpg)
+
+- **Lossless Codecs Performance Comparison**
+
+![Lossless codecs comparison](figs/Aimer_-_Ref_rain.wav.lossless.jpg)
+
+- **Lossy Codecs Performance Comparison**
+
+![Lossy codecs comparison](figs/Aimer_-_Ref_rain.wav.lossy.jpg)
+
+- **Lossy Codecs Quality Comparison**
+
+![Lossy codecs comparison](figs/Aimer_-_Ref_rain.wav.lossy_err.jpg)
+
+<details>
+<summary> Full Charts </summary>
+
+- **Lossless Codecs Performance Comparison**
+
+![Lossless codecs comparison](figs/Aimer_-_Ref_rain.full.wav.lossless.jpg)
+
+- **Lossy Codecs Performance Comparison**
+
+![Lossy codecs comparison](figs/Aimer_-_Ref_rain.full.wav.lossy.jpg)
+
+- **Lossy Codecs Quality Comparison**
+
+![Lossy codecs comparison](figs/Aimer_-_Ref_rain.full.wav.lossy_err.jpg)
+
+</details>
+
+
+## John Powell & Hans Zimmer - Hero (*Genre: Soundtrack*)
+
+- **Audio Spectrogram**
+
+![Spectrogram](figs/John_Powell_&_Hans_Zimmer_-_Hero.wav.jpg)
+
+- **Lossless Codecs Performance Comparison**
+
+![Lossless codecs comparison](figs/John_Powell_&_Hans_Zimmer_-_Hero.wav.lossless.jpg)
+
+- **Lossy Codecs Performance Comparison**
+
+![Lossy codecs comparison](figs/John_Powell_&_Hans_Zimmer_-_Hero.wav.lossy.jpg)
+
+- **Lossy Codecs Quality Comparison**
+
+![Lossy codecs comparison](figs/John_Powell_&_Hans_Zimmer_-_Hero.wav.lossy_err.jpg)
+
+<details>
+<summary> Full Charts </summary>
+
+- **Lossless Codecs Performance Comparison**
+
+![Lossless codecs comparison](figs/John_Powell_&_Hans_Zimmer_-_Hero.full.wav.lossless.jpg)
+
+- **Lossy Codecs Performance Comparison**
+
+![Lossy codecs comparison](figs/John_Powell_&_Hans_Zimmer_-_Hero.full.wav.lossy.jpg)
+
+- **Lossy Codecs Quality Comparison**
+
+![Lossy codecs comparison](figs/John_Powell_&_Hans_Zimmer_-_Hero.full.wav.lossy_err.jpg)
+
+</details>
 
 # References
 
