@@ -8,6 +8,7 @@
 - TTA (tta 2.3): Downloaded from https://sourceforge.net/projects/tta/files/tta/ttaenc-win/
 - WMA (WmaEncoder 0.2.9c): Downloaded from https://hydrogenaud.io/index.php/topic,90519.0.html
 - lossyWAV (lossyWAV 1.4.2): Downloaded from https://wiki.hydrogenaud.io/index.php?title=LossyWAV
+  - lossyFLAC = lossyWAV + FLAC; lossyTAK = lossyWAV + TAK; lossyWV = lossyWAV + Wavpack
 - ALAC (refalac v2.71): Downloaded from https://github.com/nu774/qaac/releases
 - OptimFrog (ofc & ofs v5.100): Downloaded from http://losslessaudio.org/Downloads.php
 - Opus (opusenc & opusdec 1.3): Downloaded from https://opus-codec.org/downloads/
